@@ -462,3 +462,230 @@ ul.tags li a:hover {
 	border-radius:50%;
 	font-size:12px;
 }
+
+.about_section {
+	background-color: #f9fafa;
+  }
+  
+  .about_section .row {
+	-webkit-box-align: center;
+		-ms-flex-align: center;
+			align-items: center;
+  }
+  
+  .about_section .img-box img {
+	width: 100%;
+  }
+  
+  .about_section .detail-box p {
+	margin-top: 10px;
+	margin-bottom: 35px;
+  }
+  
+  .about_section .detail-box a {
+	display: inline-block;
+	padding: 10px 45px;
+	background-color: #6bb7be;
+	color: #ffffff;
+	border-radius: 0;
+	border: 1px solid #6bb7be;
+	-webkit-transition: all .2s;
+	transition: all .2s;
+  }
+  
+  .about_section .detail-box a:hover {
+	background-color: transparent;
+	color: #6bb7be;
+  }
+
+  .contact_section {
+	position: relative;
+	background-color: #f9fafa;
+	padding-top: 75px;
+	padding-bottom: 75px;
+  }
+  
+  .contact_section .heading_container {
+	margin-bottom: 25px;
+  }
+  
+  .contact_section .heading_container h2 {
+	text-transform: uppercase;
+  }
+  
+  .contact_section .form_container input {
+	width: 100%;
+	border: none;
+	height: 50px;
+	margin-bottom: 25px;
+	padding-left: 15px;
+	outline: none;
+	color: #101010;
+	-webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+			box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+  }
+  
+  .contact_section .form_container input::-webkit-input-placeholder {
+	color: #333;
+  }
+  
+  .contact_section .form_container input:-ms-input-placeholder {
+	color: #333;
+  }
+  
+  .contact_section .form_container input::-ms-input-placeholder {
+	color: #333;
+  }
+  
+  .contact_section .form_container input::placeholder {
+	color: #333;
+  }
+  
+  .contact_section .form_container input.message-box {
+	height: 120px;
+  }
+  
+  .contact_section .form_container button {
+	border: none;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 12px 55px;
+	background-color: #6bb7be;
+	color: #ffffff;
+	border-radius: 0px;
+	border: 1px solid #6bb7be;
+	-webkit-transition: all .2s;
+	transition: all .2s;
+  }
+  
+  .contact_section .form_container button:hover {
+	background-color: transparent;
+	color: #6bb7be;
+  }
+  
+  .contact_section .map_container {
+	height: 500px;
+	overflow: hidden;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: stretch;
+		-ms-flex-align: stretch;
+			align-items: stretch;
+	padding: 0;
+  }
+  
+  .contact_section .map_container .map {
+	height: 100%;
+	-webkit-box-flex: 1;
+		-ms-flex: 1;
+			flex: 1;
+  }
+  
+  .contact_section .map_container .map #googleMap {
+	height: 100%;
+  }
+
+/**********************************/
+/********** Contact CSS ***********/
+/**********************************/
+.contact {
+    position: relative;
+    padding: 25px 0 15px 0;
+}
+
+.contact .contact-form,
+.contact .contact-info {
+    margin-bottom: 45px;
+}
+
+.contact .contact-info h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.contact .contact-info h4 i {
+    color: #000000;
+    margin-right: 5px;
+}
+
+.contact .social {
+    position: relative;
+    width: 100%;
+}
+
+.contact .social a {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    width: 40px;
+    height: 40px;
+    padding: 7px 0;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+.contact .social a i {
+    color: #000000;
+}
+
+.contact .social a:hover {
+    background: #FF6F61;
+    border-color: #FF6F61;
+}
+
+.contact .social a:hover i {
+    color: #ffffff;
+}
+
+.sidenav {
+width: 250px;
+background-color: #333;
+color: #fff;
+padding: 20px;
+box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+}
+.inbox__people {
+margin-bottom: 20px;
+}
+.inbox__people h4 {
+font-size: 18px;
+margin-bottom: 10px;
+}
+hr {
+border-color: #ccc;
+}
+.content {
+max-width: 600px;
+margin: 0 auto;
+background-color: #fff;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+padding: 20px;
+}
+.messages__history {
+max-height: 300px;
+overflow-y: scroll;
+}
+.inbox__messages {
+margin-top: 20px;
+}
+.message_form {
+margin-top: 20px;
+}
+.message_form__input {
+width: 80%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+.message_form__button {
+width: 18%;
+background-color: #007BFF;
+color: #fff;
+border: none;
+padding: 10px;
+border-radius: 4px;
+cursor: pointer;
+}

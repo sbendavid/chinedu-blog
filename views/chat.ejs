@@ -1,1 +1,53 @@
-<h1>Chat</h1>
+<!-- Your EJS template -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Application</title>
+  <!-- Add Bootstrap CSS, either by downloading it locally or linking to a CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container">
+      <div class="row">
+          <div class="col-md-3">
+              <div class="sidenav">
+                  <div class="inbox__people">
+                      <h4>Active users</h4>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-9">
+              <hr>
+              <div class="content">
+                  <div class="messages__history">
+                      <!-- Your message history content here -->
+                  </div>
+                  <div class="fallback">
+                      <!-- Fallback content here -->
+                  </div>
+                  <div class="inbox__messages">
+                      <!-- Your message content here -->
+                  </div>
+                  <form class="message_form">
+                      <div class="input-group">
+                          <input type="text" class="form-control message_form__input" placeholder="Type a message" />
+                          <div class="input-group-append">
+                              <button class="btn btn-primary message_form__button" type="submit">Enter</button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Add Bootstrap and Socket.IO scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
