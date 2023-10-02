@@ -10,10 +10,8 @@ router.get("/home", (req, res) => {
     res.render("home");
 });
 
-const messages = ["Message"];
-const users = ["user1"];
 router.get("/chat", (req, res) => {
-    res.render("chat", { messages, users });
+    res.render("chat",);
 });
 
 router.get("/aboutUs", (req, res) => {

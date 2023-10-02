@@ -15,19 +15,19 @@ const socket = io();
 
 const inboxPeople = document.querySelector(".inbox__people");
 
-let userName = "";
-let id;
 const newUserConnected = function (data) {
-
-    //give the user a random unique id
-    id = Math.floor(Math.random() * 1000000);
-    userName = 'user-' +id;
-    //console.log(typeof(userName));   
     
-    //emit an event with the user id
-    socket.emit("new user", userName);
-    //call
-    addToUsersBox(userName);
+
+  //give the user a random unique id
+  id = Math.floor(Math.random() * 1000000);
+  userName = 'user-' +id;
+  //console.log(typeof(userName));   
+  
+
+  //emit an event with the user id
+  socket.emit("new user", userName);
+  //call
+  addToUsersBox(userName);
 };
 
 const addToUsersBox = function (userName) {
@@ -61,8 +61,27 @@ socket.on("new user", function (data) {
 
 //when a user leaves
 socket.on("user disconnected", function (userName) {
+  // Remove the user from the user list (your existing code)
   document.querySelector(`.${userName}-userlist`).remove();
+
+  // Display a disconnection message
+  const disconnectionMessage = `${userName} has left the chat.`;
+  const disconnectionMessageElement = document.getElementById("disconnection-message");
+  
+  // Update the content of the disconnection message element
+  disconnectionMessageElement.textContent = disconnectionMessage;
 });
+
+// When a new user joins
+socket.on("new user", function (userName) {
+  // Display a welcome message
+  const welcomeMessage = `${userName} has joined the chat.`;
+  const welcomeMessageElement = document.getElementById("welcome-message");
+  
+  // Update the content of the welcome message element
+  welcomeMessageElement.textContent = welcomeMessage;
+});
+
 
 const inputField = document.querySelector(".message_form__input");
 const messageForm = document.querySelector(".message_form");
