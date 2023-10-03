@@ -4,6 +4,7 @@ const express = require("express");
 const app = express();
 const expressLayout = require("express-ejs-layouts");
 const socket = require("socket.io");
+const nodeMail = require('nodemailer')
 
 const PORT = process.env.PORT || 5000;
 
@@ -12,6 +13,7 @@ const server = app.listen(PORT, function () {
 
 });
 
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 // Template Engine
@@ -48,3 +50,30 @@ io.on("connection", function (socket) {
   });
 
 });
+
+async function mainMail(name, email, phone, message) {
+  const transporter = await nodeMail.createTransport({
+    service: "gmail",
+    auth: {
+      user: process.env.GMAIL_USER,
+      pass: process.env.PASSWORD,
+    },
+    secure: true,
+    port: 465,
+  });
+  const mailOption = {
+    from: process.env.GMAIL_USER,
+    to: process.env.EMAIL,
+    subject: 'Contact Form Submission',
+    html: `You got a message from 
+    Email : ${email}
+    Name: ${name}
+    Message: ${message}`,
+  };
+  try {
+    await transporter.sendMail(mailOption);
+    return Promise.resolve("Message Sent Successfully!");
+  } catch (error) {
+    return Promise.reject(error);
+  }
+}
