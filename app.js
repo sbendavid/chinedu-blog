@@ -62,8 +62,8 @@ async function mainMail(name, email, phone, message) {
     port: 465,
   });
   const mailOption = {
-    from: process.env.GMAIL_USER,
-    to: process.env.EMAIL,
+    from: email,
+    to: process.env.GMAIL_USER,
     subject: 'Contact Form Submission',
     html: `You got a message from 
     Email : ${email}
@@ -77,3 +77,5 @@ async function mainMail(name, email, phone, message) {
     return Promise.reject(error);
   }
 }
+
+mainMail();
